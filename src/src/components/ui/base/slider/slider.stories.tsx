@@ -7,16 +7,19 @@ const meta: Meta<typeof Slider> = {
   tags: ['autodocs'],
 };
 export default meta;
-type Story = StoryObj<typeof Slider>;
 
-export const Default: Story = {
-  args: { defaultValue: [40], label: 'Volume' },
+export const Default: StoryObj = {
+  render: () => <Slider defaultValue={[40]} label="Volume" />,
 };
 
-export const Range: Story = {
-  args: { defaultValue: [20, 80], label: 'Price range' },
+export const Range: StoryObj = {
+  render: () => <Slider defaultValue={[20, 80]} label="Price range" />,
 };
 
-export const WithSteps: Story = {
-  args: { defaultValue: [50], step: 10, label: 'Step by 10' },
+export const WithSteps: StoryObj = {
+  render: () => <Slider defaultValue={[50]} step={10} label="Step by 10" />,
+};
+
+export const Disabled: StoryObj = {
+  render: () => <Slider defaultValue={[60]} label="Disabled" isDisabled />,
 };

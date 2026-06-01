@@ -7,16 +7,14 @@ const meta: Meta<typeof QRCode> = {
   tags: ['autodocs'],
 };
 export default meta;
-type Story = StoryObj<typeof QRCode>;
 
-export const Default: Story = {
-  args: { value: 'https://untitledui.com', size: 'md' },
+export const Default: StoryObj = {
+  render: () => <QRCode value="https://untitledui.com" size="md" />,
 };
 
-export const Sizes: Story = {
+export const Sizes: StoryObj = {
   render: () => (
     <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-      <QRCode value="https://untitledui.com" size="sm" />
       <QRCode value="https://untitledui.com" size="md" />
       <QRCode value="https://untitledui.com" size="lg" />
     </div>

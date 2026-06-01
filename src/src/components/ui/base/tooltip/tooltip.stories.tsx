@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip, TooltipTrigger } from './tooltip';
-import { Button } from '../buttons/button';
 
 const meta: Meta = {
   title: 'Untitled UI/Base/Tooltip',
@@ -11,10 +10,19 @@ export default meta;
 export const Default: StoryObj = {
   render: () => (
     <div style={{ padding: '60px', display: 'flex', justifyContent: 'center' }}>
-      <TooltipTrigger>
-        <Button size="sm" color="secondary">Hover me</Button>
-        <Tooltip>This is a tooltip</Tooltip>
-      </TooltipTrigger>
+      <Tooltip title="This is a tooltip">
+        <TooltipTrigger>Hover me</TooltipTrigger>
+      </Tooltip>
+    </div>
+  ),
+};
+
+export const WithDescription: StoryObj = {
+  render: () => (
+    <div style={{ padding: '60px', display: 'flex', justifyContent: 'center' }}>
+      <Tooltip title="Tooltip title" description="Supporting description text.">
+        <TooltipTrigger>With description</TooltipTrigger>
+      </Tooltip>
     </div>
   ),
 };
@@ -23,10 +31,9 @@ export const Placements: StoryObj = {
   render: () => (
     <div style={{ padding: '80px', display: 'flex', gap: '16px', justifyContent: 'center' }}>
       {(['top', 'bottom', 'left', 'right'] as const).map(placement => (
-        <TooltipTrigger key={placement}>
-          <Button size="sm" color="secondary">{placement}</Button>
-          <Tooltip placement={placement}>Tooltip {placement}</Tooltip>
-        </TooltipTrigger>
+        <Tooltip key={placement} title={`Tooltip ${placement}`} placement={placement}>
+          <TooltipTrigger>{placement}</TooltipTrigger>
+        </Tooltip>
       ))}
     </div>
   ),

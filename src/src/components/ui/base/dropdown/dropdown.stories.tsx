@@ -12,15 +12,33 @@ export const Default: StoryObj = {
   render: () => (
     <div style={{ padding: '40px' }}>
       <Dropdown.Root>
-        <Dropdown.Trigger>
-          <Button size="sm" color="secondary">Open menu</Button>
-        </Dropdown.Trigger>
-        <Dropdown.Content>
-          <Dropdown.Item>Profile</Dropdown.Item>
-          <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Separator />
-          <Dropdown.Item>Sign out</Dropdown.Item>
-        </Dropdown.Content>
+        <Button size="sm" color="secondary">Open menu</Button>
+        <Dropdown.Popover>
+          <Dropdown.Menu>
+            <Dropdown.Item label="Profile" />
+            <Dropdown.Item label="Settings" />
+            <Dropdown.Separator />
+            <Dropdown.Item label="Sign out" />
+          </Dropdown.Menu>
+        </Dropdown.Popover>
+      </Dropdown.Root>
+    </div>
+  ),
+};
+
+export const WithIcons: StoryObj = {
+  render: () => (
+    <div style={{ padding: '40px' }}>
+      <Dropdown.Root>
+        <Button size="sm" color="secondary">Actions</Button>
+        <Dropdown.Popover>
+          <Dropdown.Menu>
+            <Dropdown.Item label="Edit" />
+            <Dropdown.Item label="Duplicate" />
+            <Dropdown.Separator />
+            <Dropdown.Item label="Delete" />
+          </Dropdown.Menu>
+        </Dropdown.Popover>
       </Dropdown.Root>
     </div>
   ),

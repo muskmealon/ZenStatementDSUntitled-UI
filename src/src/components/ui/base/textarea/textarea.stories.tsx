@@ -1,26 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { TextArea } from './textarea';
 
-const meta: Meta<typeof TextArea> = {
+const meta: Meta = {
   title: 'Untitled UI/Base/Textarea',
-  component: TextArea,
   tags: ['autodocs'],
 };
 export default meta;
-type Story = StoryObj<typeof TextArea>;
 
-export const Default: Story = {
-  args: { label: 'Description', placeholder: 'Write something...' },
+export const Default: StoryObj = {
+  render: () => <TextArea label="Description" placeholder="Write something..." />,
 };
 
-export const WithHint: Story = {
-  args: { label: 'Bio', placeholder: 'Tell us about yourself', hint: 'Max 280 characters' },
+export const WithHint: StoryObj = {
+  render: () => <TextArea label="Bio" placeholder="Tell us about yourself" hint="Max 280 characters" />,
 };
 
-export const Invalid: Story = {
-  args: { label: 'Message', placeholder: 'Enter message', isInvalid: true, errorMessage: 'This field is required.' },
+export const Invalid: StoryObj = {
+  render: () => <TextArea label="Message" placeholder="Enter message" isInvalid errorMessage="This field is required." />,
 };
 
-export const Disabled: Story = {
-  args: { label: 'Notes', placeholder: 'Disabled', isDisabled: true },
+export const Disabled: StoryObj = {
+  render: () => <TextArea label="Notes" placeholder="Disabled" isDisabled />,
 };
