@@ -1,0 +1,11 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Accordion } from './Accordion';
+declare const meta: Meta<typeof Accordion>;
+export default meta;
+type Story = StoryObj<typeof Accordion>;
+export declare const Default: Story;
+export declare const MultipleItems: Story;
+export declare const AllowMultipleOpen: Story;
+export declare const SingleOpen: Story;
+export declare const WithDisabledItem: Story;
+export declare const Sizes: Story;

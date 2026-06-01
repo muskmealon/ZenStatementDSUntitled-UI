@@ -1,0 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Tabs } from './Tabs';
+declare const meta: Meta<typeof Tabs>;
+export default meta;
+type Story = StoryObj<typeof Tabs>;
+export declare const LineVariant: Story;
+export declare const PillVariant: Story;
+export declare const WithIcons: Story;
+export declare const DisabledTab: Story;
+export declare const PillWithIcons: Story;

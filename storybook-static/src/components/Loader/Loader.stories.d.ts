@@ -1,0 +1,11 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Loader } from './Loader';
+declare const meta: Meta<typeof Loader>;
+export default meta;
+type Story = StoryObj<typeof Loader>;
+export declare const Default: Story;
+export declare const SpinnerSizes: Story;
+export declare const Dots: Story;
+export declare const Bar: Story;
+export declare const Colors: Story;
+export declare const WithLabel: Story;

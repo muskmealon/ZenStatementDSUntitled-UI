@@ -1,0 +1,51 @@
+/* ─── Wrapper ──────────────────────────────────────────────────────────────── */
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ─── Tooltip box ──────────────────────────────────────────────────────────── */
+.tooltip {
+  z-index: 1000;
+  max-width: 240px;
+  padding: var(--space-6) var(--space-10);
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-on-surface-bold);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-action-a12-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-action-a12-line-height);
+  border-radius: var(--radius-6);
+  white-space: normal;
+  word-wrap: break-word;
+  pointer-events: none;
+  opacity: 1;
+  width: max-content;
+}
+
+/* React Aria mounts the tooltip only when open; use data attrs for fade */
+.tooltip[data-entering] {
+  animation: tooltipIn 0.15s ease forwards;
+}
+
+.tooltip[data-exiting] {
+  animation: tooltipOut 0.1s ease forwards;
+}
+
+@keyframes tooltipIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes tooltipOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+/* Placement classes are kept for reference but React Aria handles actual positioning */
+.top, .bottom, .left, .right {}

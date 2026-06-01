@@ -1,0 +1,21 @@
+[17:02:44.237] [INFO] storybook v10.4.1
+[17:02:45.774] [DEBUG] Getting package.json info for /Users/harshchoudhary/Desktop/zen-design system/package.json...
+[17:02:47.345] [WARN] No story files found for the specified pattern: src/**/*.mdx
+[17:02:47.434] [DEBUG] Serving static files from node_modules/@chromatic-com/storybook/assets at /addon-visual-tests-assets
+[17:02:47.434] [INFO] Starting...
+[17:02:47.557] [DEBUG] Starting preview..
+[17:02:47.765] [DEBUG] Using tsconfig paths for react-docgen
+[17:02:47.788] [ERROR] Failed to build the preview
+[17:02:47.793] [ERROR] [38;2;241;97;97mReferenceError: __dirname is not defined[39m
+    at Object.viteFinal (file:///Users/harshchoudhary/Desktop/zen-design%20system/.storybook/main.ts:19:20)
+    at file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/_node-chunks/chunk-PNYLLFX3.js:9190:36
+    at async createViteServer (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/@storybook/builder-vite/dist/index.js:1575:21)
+    at async Module.start (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/@storybook/builder-vite/dist/index.js:1606:17)
+    at async storybookDevServer (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/core-server/index.js:18917:158)
+    at async buildOrThrow (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/core-server/index.js:8205:12)
+    at async buildDevStandalone (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/core-server/index.js:19478:41)
+    at async withTelemetry (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/_node-chunks/chunk-CUZMMOHY.js:655:12)
+    at async dev (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file:///Users/harshchoudhary/Desktop/zen-design%20system/node_modules/storybook/dist/bin/core.js:2806:92)
+[17:02:47.795] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

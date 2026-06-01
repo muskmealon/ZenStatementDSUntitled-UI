@@ -1,0 +1,13 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Select } from './Select';
+declare const meta: Meta<typeof Select>;
+export default meta;
+type Story = StoryObj<typeof Select>;
+export declare const Default: Story;
+export declare const WithPlaceholder: Story;
+export declare const WithLabel: Story;
+export declare const WithHelperText: Story;
+export declare const ErrorState: Story;
+export declare const Disabled: Story;
+export declare const Sizes: Story;
+export declare const WithDisabledOption: Story;

@@ -1,0 +1,123 @@
+/* ── Wrapper ────────────────────────────────────────────────── */
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ── Trigger ────────────────────────────────────────────────── */
+.trigger {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+/* ── Panel (React Aria Popover) ─────────────────────────────── */
+.panel {
+  min-width: 180px;
+  background: var(--color-surface-default);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  outline: none;
+}
+
+.panel[data-entering] {
+  animation: menuIn 0.12s ease forwards;
+}
+
+.panel[data-exiting] {
+  animation: menuOut 0.1s ease forwards;
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes menuOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-4px); }
+}
+
+/* ── Menu list ──────────────────────────────────────────────── */
+.menuList {
+  padding: var(--space-4) 0;
+  outline: none;
+}
+
+/* ── Item ───────────────────────────────────────────────────── */
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-12);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  line-height: 22px;
+  color: var(--color-text-primary);
+  text-align: left;
+  transition: background 120ms ease;
+}
+
+.item:hover:not(:disabled),
+.itemFocused {
+  background: var(--color-surface-subtle);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--color-border-brand-primary);
+  outline-offset: -2px;
+}
+
+/* ── Item icon ──────────────────────────────────────────────── */
+.itemIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+}
+
+/* ── Item label ─────────────────────────────────────────────── */
+.itemLabel {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Danger variant ─────────────────────────────────────────── */
+.itemDanger {
+  color: var(--color-text-error-bold);
+}
+
+.itemDanger .itemIcon {
+  color: var(--color-text-error-bold);
+}
+
+.itemDanger:hover:not(:disabled) {
+  background: var(--color-surface-error-subtle);
+}
+
+/* ── Disabled state ─────────────────────────────────────────── */
+.itemDisabled {
+  color: var(--color-text-disabled-bold);
+  cursor: not-allowed;
+}
+
+.itemDisabled .itemIcon {
+  color: var(--color-text-disabled-bold);
+}
+
+/* ── Divider ────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin: var(--space-4) 0;
+}

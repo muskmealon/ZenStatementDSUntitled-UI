@@ -1,0 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { ActionMenu } from './ActionMenu';
+declare const meta: Meta<typeof ActionMenu>;
+export default meta;
+type Story = StoryObj<typeof ActionMenu>;
+export declare const Default: Story;
+export declare const WithIcons: Story;
+export declare const WithDangerItem: Story;
+export declare const WithDisabledItem: Story;
+export declare const AlignedRight: Story;

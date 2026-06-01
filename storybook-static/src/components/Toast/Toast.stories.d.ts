@@ -1,0 +1,12 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Toast } from './Toast';
+declare const meta: Meta<typeof Toast>;
+export default meta;
+type Story = StoryObj<typeof Toast>;
+export declare const InfoToast: Story;
+export declare const SuccessToast: Story;
+export declare const WarningToast: Story;
+export declare const ErrorToast: Story;
+export declare const WithAction: Story;
+export declare const AllVariants: Story;
+export declare const AutoDismiss: Story;

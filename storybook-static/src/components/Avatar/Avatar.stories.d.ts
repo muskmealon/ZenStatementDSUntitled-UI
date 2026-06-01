@@ -1,0 +1,11 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Avatar } from './Avatar';
+declare const meta: Meta<typeof Avatar>;
+export default meta;
+type Story = StoryObj<typeof Avatar>;
+export declare const WithImage: Story;
+export declare const Initials: Story;
+export declare const Sizes: Story;
+export declare const WithStatus: Story;
+export declare const SquareShape: Story;
+export declare const AvatarGroupStory: Story;
