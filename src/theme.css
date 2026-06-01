@@ -1,0 +1,253 @@
+/*
+  @theme inline tells Tailwind v4 to generate utility classes (bg-*, text-*, border-*)
+  that reference the CSS variables defined in tokens.css — not hardcode values.
+  When tokens.css is updated from Figma, all Untitled UI components automatically
+  pick up the new values with zero changes here.
+*/
+
+@theme inline {
+  /* ── Typography ────────────────────────────────────────────── */
+  --font-display: var(--font-family-primary);
+  --font-body: var(--font-family-primary);
+
+  /* ── Brand palette → Teal ──────────────────────────────────── */
+  --color-brand-25:  var(--color-teal-50);
+  --color-brand-50:  var(--color-teal-50);
+  --color-brand-100: var(--color-teal-100);
+  --color-brand-200: var(--color-teal-200);
+  --color-brand-300: var(--color-teal-300);
+  --color-brand-400: var(--color-teal-400);
+  --color-brand-500: var(--color-teal-500);
+  --color-brand-600: var(--color-teal-600);
+  --color-brand-700: var(--color-teal-700);
+  --color-brand-800: var(--color-teal-800);
+  --color-brand-900: var(--color-teal-900);
+  --color-brand-950: var(--color-teal-900);
+
+  /* ── Gray palette → Grey ────────────────────────────────────── */
+  --color-gray-25:  var(--color-grey-50);
+  --color-gray-50:  var(--color-grey-50);
+  --color-gray-100: var(--color-grey-100);
+  --color-gray-200: var(--color-grey-200);
+  --color-gray-300: var(--color-grey-300);
+  --color-gray-400: var(--color-grey-400);
+  --color-gray-500: var(--color-grey-500);
+  --color-gray-600: var(--color-grey-600);
+  --color-gray-700: var(--color-grey-700);
+  --color-gray-800: var(--color-grey-800);
+  --color-gray-900: var(--color-grey-900);
+  --color-gray-950: var(--color-grey-900);
+
+  /* ── Error palette → Red ────────────────────────────────────── */
+  --color-error-25:  var(--color-red-50);
+  --color-error-50:  var(--color-red-50);
+  --color-error-100: var(--color-red-100);
+  --color-error-200: var(--color-red-200);
+  --color-error-300: var(--color-red-300);
+  --color-error-400: var(--color-red-400);
+  --color-error-500: var(--color-red-500);
+  --color-error-600: var(--color-red-600);
+  --color-error-700: var(--color-red-700);
+  --color-error-800: var(--color-red-800);
+  --color-error-900: var(--color-red-900);
+  --color-error-950: var(--color-red-900);
+
+  /* ── Success palette → Green ────────────────────────────────── */
+  --color-success-25:  var(--color-green-50);
+  --color-success-50:  var(--color-green-50);
+  --color-success-100: var(--color-green-100);
+  --color-success-200: var(--color-green-200);
+  --color-success-300: var(--color-green-300);
+  --color-success-400: var(--color-green-400);
+  --color-success-500: var(--color-green-500);
+  --color-success-600: var(--color-green-600);
+  --color-success-700: var(--color-green-700);
+  --color-success-800: var(--color-green-800);
+  --color-success-900: var(--color-green-900);
+  --color-success-950: var(--color-green-900);
+
+  /* ── Warning palette → Yellow ───────────────────────────────── */
+  --color-warning-25:  var(--color-yellow-50);
+  --color-warning-50:  var(--color-yellow-50);
+  --color-warning-100: var(--color-yellow-100);
+  --color-warning-200: var(--color-yellow-200);
+  --color-warning-300: var(--color-yellow-300);
+  --color-warning-400: var(--color-yellow-400);
+  --color-warning-500: var(--color-yellow-500);
+  --color-warning-600: var(--color-yellow-600);
+  --color-warning-700: var(--color-yellow-700);
+  --color-warning-800: var(--color-yellow-800);
+  --color-warning-900: var(--color-yellow-900);
+  --color-warning-950: var(--color-yellow-900);
+
+  /* ── Info palette → Blue ────────────────────────────────────── */
+  --color-info-25:  var(--color-blue-50);
+  --color-info-50:  var(--color-blue-50);
+  --color-info-100: var(--color-blue-100);
+  --color-info-200: var(--color-blue-200);
+  --color-info-300: var(--color-blue-300);
+  --color-info-400: var(--color-blue-400);
+  --color-info-500: var(--color-blue-500);
+  --color-info-600: var(--color-blue-600);
+  --color-info-700: var(--color-blue-700);
+  --color-info-800: var(--color-blue-800);
+  --color-info-900: var(--color-blue-900);
+  --color-info-950: var(--color-blue-900);
+
+  /* ── Semantic surface tokens ────────────────────────────────── */
+  --color-surface-default:                      var(--color-surface-default);
+  --color-surface-subtle:                       var(--color-surface-subtle);
+  --color-surface-light:                        var(--color-surface-light);
+  --color-surface-medium:                       var(--color-surface-medium);
+  --color-surface-bold:                         var(--color-surface-bold);
+  --color-surface-extra-bold:                   var(--color-surface-extra-bold);
+  --color-surface-dark:                         var(--color-surface-dark);
+  --color-surface-extra-dark:                   var(--color-surface-extra-dark);
+  --color-surface-brand-primary:                var(--color-surface-brand-primary);
+  --color-surface-brand-primary-subtle:         var(--color-surface-brand-primary-subtle);
+  --color-surface-brand-primary-medium:         var(--color-surface-brand-primary-medium);
+  --color-surface-brand-primary-semi-bold:      var(--color-surface-brand-primary-semi-bold);
+  --color-surface-brand-primary-extra-bold:     var(--color-surface-brand-primary-extra-bold);
+  --color-surface-brand-secondary:              var(--color-surface-brand-secondary);
+  --color-surface-brand-secondary-subtle:       var(--color-surface-brand-secondary-subtle);
+  --color-surface-brand-secondary-medium:       var(--color-surface-brand-secondary-medium);
+  --color-surface-brand-secondary-semi-bold:    var(--color-surface-brand-secondary-semi-bold);
+  --color-surface-brand-secondary-extra-bold:   var(--color-surface-brand-secondary-extra-bold);
+  --color-surface-error-subtle:                 var(--color-surface-error-subtle);
+  --color-surface-error-medium:                 var(--color-surface-error-medium);
+  --color-surface-error-semi-bold:              var(--color-surface-error-semi-bold);
+  --color-surface-error-bold:                   var(--color-surface-error-bold);
+  --color-surface-error-extra-bold:             var(--color-surface-error-extra-bold);
+  --color-surface-success-subtle:               var(--color-surface-success-subtle);
+  --color-surface-success-medium:               var(--color-surface-success-medium);
+  --color-surface-success-semi-bold:            var(--color-surface-success-semi-bold);
+  --color-surface-success-bold:                 var(--color-surface-success-bold);
+  --color-surface-success-extra-bold:           var(--color-surface-success-extra-bold);
+  --color-surface-warning-subtle:               var(--color-surface-warning-subtle);
+  --color-surface-warning-medium:               var(--color-surface-warning-medium);
+  --color-surface-warning-semi-bold:            var(--color-surface-warning-semi-bold);
+  --color-surface-warning-bold:                 var(--color-surface-warning-bold);
+  --color-surface-warning-extra-bold:           var(--color-surface-warning-extra-bold);
+  --color-surface-disabled:                     var(--color-surface-disabled);
+  --color-surface-disabled-light:               var(--color-surface-disabled-light);
+  --color-surface-disabled-medium:              var(--color-surface-disabled-medium);
+  --color-surface-disabled-semi-bold:           var(--color-surface-disabled-semi-bold);
+  --color-surface-disabled-bold:                var(--color-surface-disabled-bold);
+  --color-surface-overlay-dark-subtle:          var(--color-surface-overlay-dark-subtle);
+  --color-surface-overlay-dark-bold:            var(--color-surface-overlay-dark-bold);
+  --color-surface-overlay-white-subtle:         var(--color-surface-overlay-white-subtle);
+  --color-surface-overlay-white-bold:           var(--color-surface-overlay-white-bold);
+  --color-surface-overlay-white-extra-bold:     var(--color-surface-overlay-white-extra-bold);
+
+  /* ── Semantic text tokens ───────────────────────────────────── */
+  --color-text-primary:                         var(--color-text-primary);
+  --color-text-secondary:                       var(--color-text-secondary);
+  --color-text-tertiary:                        var(--color-text-tertiary);
+  --color-text-muted:                           var(--color-text-muted);
+  --color-text-light:                           var(--color-text-light);
+  --color-text-subtle:                          var(--color-text-subtle);
+  --color-text-on-surface-bold:                 var(--color-text-on-surface-bold);
+  --color-text-on-surface-subtle:               var(--color-text-on-surface-subtle);
+  --color-text-brand-primary:                   var(--color-text-brand-primary);
+  --color-text-brand-primary-subtle:            var(--color-text-brand-primary-subtle);
+  --color-text-brand-primary-medium:            var(--color-text-brand-primary-medium);
+  --color-text-brand-primary-semi-bold:         var(--color-text-brand-primary-semi-bold);
+  --color-text-brand-primary-extra-bold:        var(--color-text-brand-primary-extra-bold);
+  --color-text-brand-secondary:                 var(--color-text-brand-secondary);
+  --color-text-brand-secondary-subtle:          var(--color-text-brand-secondary-subtle);
+  --color-text-brand-secondary-medium:          var(--color-text-brand-secondary-medium);
+  --color-text-brand-secondary-semi-bold:       var(--color-text-brand-secondary-semi-bold);
+  --color-text-brand-secondary-extra-bold:      var(--color-text-brand-secondary-extra-bold);
+  --color-text-error-subtle:                    var(--color-text-error-subtle);
+  --color-text-error-medium:                    var(--color-text-error-medium);
+  --color-text-error-semi-bold:                 var(--color-text-error-semi-bold);
+  --color-text-error-bold:                      var(--color-text-error-bold);
+  --color-text-error-extra-bold:                var(--color-text-error-extra-bold);
+  --color-text-success-subtle:                  var(--color-text-success-subtle);
+  --color-text-success-medium:                  var(--color-text-success-medium);
+  --color-text-success-semi-bold:               var(--color-text-success-semi-bold);
+  --color-text-success-bold:                    var(--color-text-success-bold);
+  --color-text-success-extra-bold:              var(--color-text-success-extra-bold);
+  --color-text-warning-subtle:                  var(--color-text-warning-subtle);
+  --color-text-warning-medium:                  var(--color-text-warning-medium);
+  --color-text-warning-semi-bold:               var(--color-text-warning-semi-bold);
+  --color-text-warning-bold:                    var(--color-text-warning-bold);
+  --color-text-warning-extra-bold:              var(--color-text-warning-extra-bold);
+  --color-text-disabled:                        var(--color-text-disabled);
+  --color-text-disabled-light:                  var(--color-text-disabled-light);
+  --color-text-disabled-semi-bold:              var(--color-text-disabled-semi-bold);
+  --color-text-disabled-bold:                   var(--color-text-disabled-bold);
+
+  /* ── Semantic border tokens ─────────────────────────────────── */
+  --color-border-default:                       var(--color-border-default);
+  --color-border-subtle:                        var(--color-border-subtle);
+  --color-border-light:                         var(--color-border-light);
+  --color-border-medium:                        var(--color-border-medium);
+  --color-border-semi-bold:                     var(--color-border-semi-bold);
+  --color-border-bold:                          var(--color-border-bold);
+  --color-border-extra-bold:                    var(--color-border-extra-bold);
+  --color-border-dark:                          var(--color-border-dark);
+  --color-border-extra-dark:                    var(--color-border-extra-dark);
+  --color-border-white:                         var(--color-border-white);
+  --color-border-overlay:                       var(--color-border-overlay);
+  --color-border-brand-primary:                 var(--color-border-brand-primary);
+  --color-border-brand-primary-subtle:          var(--color-border-brand-primary-subtle);
+  --color-border-brand-primary-medium:          var(--color-border-brand-primary-medium);
+  --color-border-brand-primary-semi-bold:       var(--color-border-brand-primary-semi-bold);
+  --color-border-brand-primary-extra-bold:      var(--color-border-brand-primary-extra-bold);
+  --color-border-brand-secondary:               var(--color-border-brand-secondary);
+  --color-border-brand-secondary-subtle:        var(--color-border-brand-secondary-subtle);
+  --color-border-brand-secondary-medium:        var(--color-border-brand-secondary-medium);
+  --color-border-brand-secondary-semi-bold:     var(--color-border-brand-secondary-semi-bold);
+  --color-border-brand-secondary-extra-bold:    var(--color-border-brand-secondary-extra-bold);
+  --color-border-error-subtle:                  var(--color-border-error-subtle);
+  --color-border-error-medium:                  var(--color-border-error-medium);
+  --color-border-error-semi-bold:               var(--color-border-error-semi-bold);
+  --color-border-error-bold:                    var(--color-border-error-bold);
+  --color-border-error-extra-bold:              var(--color-border-error-extra-bold);
+  --color-border-success-subtle:                var(--color-border-success-subtle);
+  --color-border-success-medium:                var(--color-border-success-medium);
+  --color-border-success-semi-bold:             var(--color-border-success-semi-bold);
+  --color-border-success-bold:                  var(--color-border-success-bold);
+  --color-border-success-extra-bold:            var(--color-border-success-extra-bold);
+  --color-border-warning-subtle:                var(--color-border-warning-subtle);
+  --color-border-warning-medium:                var(--color-border-warning-medium);
+  --color-border-warning-semi-bold:             var(--color-border-warning-semi-bold);
+  --color-border-warning-bold:                  var(--color-border-warning-bold);
+  --color-border-warning-extra-bold:            var(--color-border-warning-extra-bold);
+  --color-border-disabled:                      var(--color-border-disabled);
+  --color-border-disabled-medium:               var(--color-border-disabled-medium);
+  --color-border-disabled-semi-bold:            var(--color-border-disabled-semi-bold);
+  --color-border-disabled-bold:                 var(--color-border-disabled-bold);
+
+  /* ── Spacing ────────────────────────────────────────────────── */
+  --spacing-0:  var(--space-0);
+  --spacing-1:  var(--space-2);
+  --spacing-2:  var(--space-4);
+  --spacing-3:  var(--space-6);
+  --spacing-4:  var(--space-8);
+  --spacing-5:  var(--space-10);
+  --spacing-6:  var(--space-12);
+  --spacing-7:  var(--space-14);
+  --spacing-8:  var(--space-16);
+  --spacing-10: var(--space-20);
+  --spacing-12: var(--space-24);
+  --spacing-14: var(--space-28);
+  --spacing-16: var(--space-32);
+  --spacing-18: var(--space-36);
+  --spacing-20: var(--space-40);
+  --spacing-24: var(--space-48);
+  --spacing-28: var(--space-56);
+  --spacing-32: var(--space-64);
+
+  /* ── Border radius ──────────────────────────────────────────── */
+  --radius-none: var(--radius-0);
+  --radius-xs:   var(--radius-2);
+  --radius-sm:   var(--radius-4);
+  --radius-md:   var(--radius-8);
+  --radius-lg:   var(--radius-12);
+  --radius-xl:   var(--radius-16);
+  --radius-2xl:  var(--radius-20);
+  --radius-3xl:  var(--radius-24);
+  --radius-full: var(--radius-rounded);
+}
